@@ -1,6 +1,9 @@
 import '../styles/Peeker.scss';
 
+import Deck from './Deck'
+
 function Peeker() {
+
   return (
     <div className="wrapper">
       <div className="odds"></div>
