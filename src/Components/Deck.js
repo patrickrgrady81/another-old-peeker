@@ -10,10 +10,11 @@ class Deck {
         const fullSuits = ['Spades', 'Clubs', 'Hearts', 'Diamonds'];
         const values = ['a', '2', '3', '4', '5', '6', '7', '8', '9', 't', 'j', 'q', 'k'];
         const fullValues = ['Ace', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Jack', 'Queen', 'King'];
+        let count = 0;
 
         for (let i = 0; i < suits.length; i++) {
             for (let j = 0; j < values.length; j++) {
-                this.cards.push(new Card(suits[i], values[j], fullSuits[i], fullValues[j]));
+                this.cards.push(new Card(count++, suits[i], values[j], fullSuits[i], fullValues[j]));
             }
         }
     }

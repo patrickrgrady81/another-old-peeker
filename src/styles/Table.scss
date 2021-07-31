@@ -1,0 +1,40 @@
+.table {
+    display: flex;
+    flex-direction: column;
+
+    .cards, .hold-buttons, .controls {
+        width: 100%;
+    }
+
+    .cards {
+        background-color: rgb(63, 0, 44);
+        height: 75%;
+    }
+
+    .hold-buttons {
+        background-color: orange;
+        height: 10%;
+    }
+    
+    .controls {
+        height: 15%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .bet-one, .draw, .bet-max {
+            height: 75%;
+            width: 20%;
+            border: 2px solid white;
+            border-radius: 10px;
+            background-color: black;
+            color: white;
+            text-transform: uppercase;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            filter: drop-shadow(10px 5px 4px black);
+        }
+    }    
+}

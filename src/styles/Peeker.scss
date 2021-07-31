@@ -1,4 +1,5 @@
 //variables
+$green-bg: rgb(27, 173, 27);
 
 .wrapper {
     display: grid;
@@ -35,4 +36,5 @@
 .odds, .table, .pay, .credits, .outcome, .hints {
     border: 2px solid red;
     border-collapse: collapse;
+    background: $green-bg;
 } 
