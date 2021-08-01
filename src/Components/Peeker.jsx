@@ -1,19 +1,21 @@
 import '../styles/Peeker.scss';
 
-import Deck from './Deck'
+// import Deck from './Deck'
 
 import Table from './Table'
 
+// TODO: credits and hook up with bet 
+
 function Peeker() {
 
-  const showDeck = () => {
-    let deck = new Deck();
-    deck.create();
-    deck.shuffle();
-    deck.cards.forEach(card => {
-      card.log();
-    });
-  }
+  // const showDeck = () => {
+  //   let deck = new Deck();
+  //   deck.create();
+  //   deck.shuffle();
+  //   deck.cards.forEach(card => {
+  //     card.log();
+  //   });
+  // }
 
   // showDeck();
 
