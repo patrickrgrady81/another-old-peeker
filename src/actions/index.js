@@ -16,8 +16,9 @@ export const betOne = () => {
     }
 }
 
-export const betFive = () => {
+export const betMax = () => {
     return {
-        type: 'BETFIVE'
+        type: 'BETMAX',
+        max: 5
     }
 }

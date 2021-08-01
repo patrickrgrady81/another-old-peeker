@@ -6,8 +6,8 @@ const betReducer = (state = 1, action) => {
             return state - 1;
         case 'BETONE':
             return state = 1;
-        case 'BETFIVE':
-            return state = 5;
+        case 'BETMAX':
+            return state = action.max;
         default:
             return state;
     }
