@@ -7,12 +7,12 @@
     }
 
     .cards {
-        background-color: cornflowerblue;
         height: 70%;
     }
 
     .hold-buttons {
         background-color: orange;
         height: 10%;
+        z-index: -1;
     }
 }
