@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Controls from './Controls';
+import Cards from './Cards';
 
 import '../../styles/Table.scss'
 
@@ -8,7 +9,7 @@ function Table() {
 
     return (
         <div className="table">
-            <div className="cards"></div>
+            <Cards />
             <div className="hold-buttons"></div>
             <Controls>
 
