@@ -5,15 +5,11 @@
     background-color: $background-green;
     display: flex;
     justify-content: space-around;
-
-    // img {
-    //     width: 15%;
-    //     height: auto;
-    // }
+    align-items: center;
+    height: 70%;
     
     .playing-cards {
         width: 18%;
         height: 75%;
     }
-
 }
