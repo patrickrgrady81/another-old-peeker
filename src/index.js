@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.scss';
-import Peeker from './Components/Peeker';
 import { createStore } from 'redux';
-import rootReducer from './reducers';
 import { Provider } from 'react-redux';
+import Peeker from './Components/Peeker';
+import rootReducer from './reducers';
+import './index.scss';
 
 const store = createStore(
     rootReducer,

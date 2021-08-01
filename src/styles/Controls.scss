@@ -1,22 +1,25 @@
+@import './vars';
 
 .controls {
     height: 20%;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    font-family: $font-tech;
 
     .bet-one, .draw, .bet-max {
         height: 75%;
         width: 20%;
-        border: 2px solid white;
-        border-radius: 10px;
-        background-color: black;
-        color: white;
+        border: $button-border;
+        border-radius: $button-border-radius;
+        background-color: $button-background;
+        color: $font-color;
         text-transform: uppercase;
         display: flex;
         justify-content: center;
         align-items: center;
         cursor: pointer;
-        filter: drop-shadow(10px 5px 4px black);
+        user-select: none;
+        filter: $button-drop-shadow;
     }
 }    

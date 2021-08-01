@@ -38,3 +38,17 @@ $green-bg: rgb(27, 173, 27);
     border-collapse: collapse;
     background: $green-bg;
 } 
+
+@media (max-width: 700px) { 
+    .wrapper {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+    }
+
+    .odds { grid-area: 1 / 1 / 2 / 2; }
+    .table { grid-area: 2 / 1 / 3 / 2; }
+    .pay { grid-area: 3 / 1 / 4 / 2; }
+    .credits { grid-area: 4 / 1 / 5 / 2; }
+    .outcome { grid-area: 5 / 1 / 6 / 2; }
+    .hints { grid-area: 6 / 1 / 7 / 2; }
+}

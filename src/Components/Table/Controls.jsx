@@ -1,26 +1,27 @@
 import React from 'react'
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
-import { betOne, betMax } from '../../actions'
+import { betOne, betMax } from '../../actions/bet';
+import { removeCredits } from '../../actions/credits';
 
 import '../../styles/Controls.scss';
 
 function Controls() {
 
     const dispatch = useDispatch();
+    const bet = useSelector(state => state.bet);
 
     const handleButton = (e) => {
         switch (e.target.id){
             case 'bet-one':
-                console.log('BET ONE');
                 dispatch(betOne());
                 break;
             case 'draw':
-                console.log('DRAW');
+                console.log(`sending ${bet} credits to action removeCredits`);
+                dispatch(removeCredits(bet))
                 break;
             case 'bet-max':
                 dispatch(betMax());
-                console.log('BET MAX');
                 break;
             default:
                 break;
