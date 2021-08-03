@@ -7,15 +7,27 @@
     align-items: center;
 
     button {
-        font-family: $font-tech;
-        font-size: 1.3rem;
         width: 18%;
         height: 60%;
     }
         
     .hold-button {
         border: 2px solid black;
-        width: 18%;
-        height: 75%;
+        font-family: $font-tech;
+        font-size: 1.5rem;
+        width: 11%;
+        height: content;
+        user-select: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .light-red {
+        background-color: #ffe7aaf3;
+    }
+
+    .dark-red {
+        background-color: #cf0303;
     }
 }
