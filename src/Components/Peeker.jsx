@@ -6,6 +6,7 @@ import Table from './Table'
 import Credits from './Credits';
 import Deck from './Deck';
 import Hand from './Hand';
+import Outcome from './Outcome';
 
 import { saveDeck } from '../actions/deck';
 import { saveHand } from '../actions/hand';
@@ -32,7 +33,7 @@ function Peeker() {
         <Table />
         <div className="pay"></div>
         <Credits />
-        <div className="outcome"></div>
+        <Outcome />
         <div className="hints"></div>
     </div>
     );

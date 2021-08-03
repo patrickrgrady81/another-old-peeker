@@ -33,9 +33,12 @@
 }
 
 .odds, .table, .pay, .credits, .outcome, .hints {
+    background: $background-green;
+} 
+
+.odds, .pay, .hints {
     border: 2px solid red;
     border-collapse: collapse;
-    background: $background-green;
 } 
 
 @media (max-width: 700px) { 
