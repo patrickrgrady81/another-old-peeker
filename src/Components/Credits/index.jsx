@@ -10,7 +10,7 @@ function Credits() {
     const credits = useSelector(state => state.credits); 
     const bet = useSelector(state => state.bet);
 
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
 
     const handleClick = (e) => {
         switch (e.target.id) {

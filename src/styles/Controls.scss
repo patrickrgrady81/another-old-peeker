@@ -6,6 +6,8 @@
     justify-content: space-around;
     align-items: center;
     font-family: $font-tech;
+    white-space: nowrap;
+
 
     .bet-one, .draw, .bet-max {
         height: 75%;

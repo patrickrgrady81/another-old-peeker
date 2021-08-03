@@ -35,6 +35,18 @@ class Deck {
             this.cards[i] = t;
         }
     }
+    
+    dealOne() {
+        return this.cards.pop();
+    }
+
+    deal(amount) {
+        let cards = []; 
+        for (let i = 0; i < amount; i++) {
+            cards.push(this.dealOne());
+        }
+        return cards;
+    }
 }
 
 export default Deck;
