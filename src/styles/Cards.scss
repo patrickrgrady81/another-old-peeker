@@ -1,12 +1,13 @@
 @import './vars';
 
 .cards {
-    width: 100%;
+    // width: 80%;
+    aspect-ratio: 1.56 / 1;
     background-color: $background-green;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 70%;
+    // height: 70%;
     
     .playing-cards {
         width: 18%;
