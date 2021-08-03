@@ -10,7 +10,7 @@ function Outcome() {
 
     return (
         <div className="outcome">
-            {hand.evaluate()}
+            { (hand.length !== 0) ? hand.evaluate() : <h1>LOADING...</h1>}
         </div>
     )
 }

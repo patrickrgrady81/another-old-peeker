@@ -44,19 +44,3 @@ function Cards() {
 }
 
 export default Cards;
-
-// 
-
-
-        // <div className="cards">
-        //     <img src="/assets/cards/ad.png" alt="card1" className="playing-cards" />
-        //     <img src="/assets/cards/ad.png" alt="card1" className="playing-cards" />
-        //     <img src="/assets/cards/ad.png" alt="card1" className="playing-cards" />
-        //     <img src="/assets/cards/ad.png" alt="card1" className="playing-cards" />
-        //     <img src="/assets/cards/ad.png" alt="card1" className="playing-cards" />
-        // </div>
-
-
-                    // { hand.forEach((card) => {
-            //     return <img src={`/assets/cards/${card.value}${card.suit}.png`} alt="" />
-            // })}
