@@ -21,11 +21,11 @@ function Peeker() {
 
     const injectHand = () => {
         let hand = [];
-        hand.push(new Card(1, 's', 'k', 'Spades', 'King'));
-        hand.push(new Card(2, 'd', '5', 'Diamonds', 'Five'));
-        hand.push(new Card(3, 'c', '5', 'Clubs', 'Five'));
-        hand.push(new Card(4, 'h', '5', 'Hearts', 'Five'));
-        hand.push(new Card(5, 's', '5', 'Spades', 'Five'));
+        hand.push(new Card(1, 's', 'k', 'Spades', 'King', 13));
+        hand.push(new Card(2, 'd', 'j', 'Diamonds', 'Jack', 11));
+        hand.push(new Card(3, 'c', 'a', 'Clubs', 'Ace', 1));
+        hand.push(new Card(4, 'h', 'q', 'Hearts', 'Queen', 12));
+        hand.push(new Card(5, 's', 't', 'Spades', 'Ten', 10));
         let newHand = new Hand(hand);
         newHand.inject(hand);
         return newHand;

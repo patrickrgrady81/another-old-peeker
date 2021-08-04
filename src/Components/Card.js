@@ -1,10 +1,11 @@
 class Card {
-    constructor(id, suit, value, fullSuit, fullValue) {
+    constructor(id, suit, value, fullSuit, fullValue, numberVal) {
+        this.id = id;
         this.suit = suit;
         this.value = value;
         this.fullSuit = fullSuit;
         this.fullValue = fullValue;
-        this.id = id;
+        this.numberVal = numberVal;
     }
 
     log() {

@@ -17,8 +17,7 @@ function Controls() {
                 dispatch(betOne());
                 break;
             case 'draw':
-                console.log(`sending ${bet} credits to action removeCredits`);
-                dispatch(removeCredits(bet))
+                dispatch(removeCredits(bet));
                 break;
             case 'bet-max':
                 dispatch(betMax());
