@@ -17,15 +17,15 @@ import '../styles/Peeker.scss';
 function Peeker() {
 
     const dispatch = useDispatch();
-    let toInject = true;
+    let toInject = false;
 
     const injectHand = () => {
         let hand = [];
         hand.push(new Card(3, 'd', 't', 'Diamonds', 'Ten', 10));
-        hand.push(new Card(4, 'h', 't', 'Hearts', 'Ten', 10));
-        hand.push(new Card(1, 's', 'k', 'Spades', 'King', 13));
-        hand.push(new Card(2, 'h', 'k', 'Hearts', 'King', 13));
-        hand.push(new Card(5, 's', '2', 'Spades', 'Two', 2));
+        hand.push(new Card(4, 'h', '6', 'Hearts', 'Six', 6));
+        hand.push(new Card(1, 's', 't', 'Spades', 'Ten', 10));
+        hand.push(new Card(2, 'h', '5', 'Hearts', 'Five', 5));
+        hand.push(new Card(5, 's', '3', 'Spades', 'Three', 3));
         let newHand = new Hand(hand);
         newHand.inject(hand);
         return newHand;
@@ -38,6 +38,7 @@ function Peeker() {
         deck.create();
         deck.shuffle();
         toInject ? hand = injectHand() : hand.cards = deck.deal(5);
+        console.table(hand.cards);
         dispatch(saveDeck(deck));
         dispatch(saveHand(hand));
     },[dispatch, toInject]);

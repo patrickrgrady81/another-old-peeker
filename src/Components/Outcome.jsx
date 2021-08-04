@@ -6,7 +6,7 @@ import '../styles/Outcome.scss';
 
 function Outcome() {
 
-    const hand = useSelector(state => state.hand)
+    const hand = useSelector(state => state.hand);
 
     return (
         <div className="outcome">

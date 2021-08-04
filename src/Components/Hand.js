@@ -3,7 +3,6 @@ class Hand {
         this.cards = cards;
         this.sortedCards = null;
         this.lookup = null;
-        this.count = this.cards.length;
         this.value = 0;
     }
 
@@ -12,8 +11,9 @@ class Hand {
         let outcome;
 
         const countPairs = () => {
+            let count = this.cards.length;
             let hm = {};
-            for (let i = 0; i < this.count; i++) {
+            for (let i = 0; i < count; i++) {
                 if (this.cards[i].value in hm) {
                     hm[this.cards[i].value]++;
                 } else {
@@ -30,6 +30,7 @@ class Hand {
             let vals = [];
             let three = null;
             let two = null;
+            console.log(this.lookup);
 
             for (let item in this.lookup) {
                 if (this.lookup[item] === 4) {
