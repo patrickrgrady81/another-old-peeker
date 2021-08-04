@@ -38,7 +38,6 @@ function Peeker() {
         deck.create();
         deck.shuffle();
         toInject ? hand = injectHand() : hand.cards = deck.deal(5);
-        console.table(hand.cards);
         dispatch(saveDeck(deck));
         dispatch(saveHand(hand));
     },[dispatch, toInject]);

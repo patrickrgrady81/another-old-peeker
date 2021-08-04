@@ -1,25 +1,27 @@
 import React from 'react';
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 
 import { changeHolds } from '../../actions/holds';
 
 import '../../styles/HoldButtons.scss';
 
 function HoldButttons() {
-
+    const gameState = useSelector(state => state.gameState)
     const dispatch = useDispatch();
 
     const handleClick = (e) => {
-        let id = Number(e.target.id);
+        if (gameState !== 'START') {
+            let id = Number(e.target.id);
 
-        if (e.target.classList.contains('light-red')) {
-            e.target.classList.remove('light-red');
-            e.target.classList.add('dark-red');
-            dispatch(changeHolds(id));
-        } else {
-            e.target.classList.remove('dark-red');
-            e.target.classList.add('light-red');
-            dispatch(changeHolds(id));
+            if (e.target.classList.contains('light-red')) {
+                e.target.classList.remove('light-red');
+                e.target.classList.add('dark-red');
+                dispatch(changeHolds(id));
+            } else {
+                e.target.classList.remove('dark-red');
+                e.target.classList.add('light-red');
+                dispatch(changeHolds(id));
+            }
         }
     }
 

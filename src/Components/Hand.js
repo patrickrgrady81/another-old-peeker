@@ -30,7 +30,6 @@ class Hand {
             let vals = [];
             let three = null;
             let two = null;
-            console.log(this.lookup);
 
             for (let item in this.lookup) {
                 if (this.lookup[item] === 4) {
@@ -123,7 +122,7 @@ class Hand {
         if (getFourThreeTwo()['isTwo'] && getFourThreeTwo()['vals'].length === 2) {
             let sorted = getFourThreeTwo()['vals'].sort();
             this.value = 200 + Number(getFourThreeTwo()['vals'][0] + getFourThreeTwo()['vals'][1]);
-            return `Two Pair ${sorted[0].toUpperCase()}s over ${sorted[1].toUpperCase()}s`;
+            return `Two Pair ${sorted[1].toUpperCase()}s over ${sorted[0].toUpperCase()}s`;
         }
 
         // pair 100

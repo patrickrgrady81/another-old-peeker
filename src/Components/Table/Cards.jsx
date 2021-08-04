@@ -7,6 +7,7 @@ import { changeHolds } from '../../actions/holds';
 function Cards() {
 
     const hand = useSelector(state => state.hand);
+    const gameState = useSelector(state => state.gameState);
 
     let dispatch = useDispatch();
 
@@ -29,17 +30,25 @@ function Cards() {
     let count = 0;
 
     if (hand.cards) {
-        let cardList = hand.cards.map(card => {
-            return <img key={card.id} id={count++} src={`/assets/cards/${card.value}${card.suit}.png`} alt="card" className="playing-cards" onClick={handleClick}></img>
-        })
-        
-        return (
-            <div className="cards">
-                <>{cardList}</>
-                
-            </div>
-        )} else {
-            return <h1>Loading...</h1>
+        if (gameState !== 'START') {
+            let cardList = hand.cards.map(card => {
+                return <img key={card.id} id={count++} src={`/assets/cards/${card.value}${card.suit}.png`} alt={`${card.fullValue} of ${card.fullSuit}`} className="playing-cards" onClick={handleClick}></img>
+            })
+            
+            return <div className="cards">{cardList}</div>   
+        } else {
+            return (
+                <div className="cards">
+                    <img className="playing-cards" src="assets/cards/red_back.png" alt="Back of Playing Card"></img>
+                    <img className="playing-cards" src="assets/cards/red_back.png" alt="Back of Playing Card"></img>
+                    <img className="playing-cards" src="assets/cards/red_back.png" alt="Back of Playing Card"></img>
+                    <img className="playing-cards" src="assets/cards/red_back.png" alt="Back of Playing Card"></img>
+                    <img className="playing-cards" src="assets/cards/red_back.png" alt="Back of Playing Card"></img>
+                </div>
+            )
+        }
+    } else {
+        return <h1>Loading...</h1>
     }
 }
 
