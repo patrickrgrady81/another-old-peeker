@@ -1,11 +1,14 @@
-import React from 'react'
+import React from 'react';
+import { useSelector } from 'react-redux';
 
-import payTable from './pay'
+import payTable from './pay';
 
-import '../styles/Paytable.scss'
+import '../styles/Paytable.scss';
 
 function Paytable() {
-    
+
+    const bet = useSelector(state => state.bet);
+
     return (
         <>
         <h3>PAYTABLE</h3>
@@ -13,54 +16,54 @@ function Paytable() {
             <thead>
                 <tr className="head">
                     {payTable.map((cols, i) => (
-                        <th key={i} className="col">{cols[0]}</th>
+                        <th key={i} className= {(i === bet ? "active" : "col")}>{cols[0]}</th>
                     ))}
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     {payTable.map((cols, i) => (
-                        <th key={i} className="col">{cols[1]}</th>
+                        <th key={i} className={(i === bet ? "active" : "col")}>{cols[1]}</th>
                     ))}
                 </tr>
                 <tr>
                     {payTable.map((cols, i) => (
-                        <th key={i} className="col">{cols[2]}</th>
+                        <th key={i} className={(i === bet ? "active" : "col")}>{cols[2]}</th>
                     ))}
                 </tr>
                 <tr>
                     {payTable.map((cols, i) => (
-                        <th key={i} className="col">{cols[3]}</th>
+                        <th key={i} className={(i === bet ? "active" : "col")}>{cols[3]}</th>
                     ))}
                 </tr>
                 <tr>
                     {payTable.map((cols, i) => (
-                        <th key={i} className="col">{cols[4]}</th>
+                        <th key={i} className={(i === bet ? "active" : "col")}>{cols[4]}</th>
                     ))}
                 </tr>
                 <tr>
                     {payTable.map((cols, i) => (
-                        <th key={i} className="col">{cols[5]}</th>
+                        <th key={i} className={(i === bet ? "active" : "col")}>{cols[5]}</th>
                     ))}
                 </tr>
                 <tr>
                     {payTable.map((cols, i) => (
-                        <th key={i} className="col">{cols[6]}</th>
+                        <th key={i} className={(i === bet ? "active" : "col")}>{cols[6]}</th>
                     ))}
                 </tr>
                 <tr>
                     {payTable.map((cols, i) => (
-                        <th key={i} className="col">{cols[7]}</th>
+                        <th key={i} className={(i === bet ? "active" : "col")}>{cols[7]}</th>
                     ))}
                 </tr>
                 <tr>
                     {payTable.map((cols, i) => (
-                        <th key={i} className="col">{cols[8]}</th>
+                        <th key={i} className={(i === bet ? "active" : "col")}>{cols[8]}</th>
                     ))}
                 </tr>
                 <tr>
                     {payTable.map((cols, i) => (
-                        <th key={i} className="col">{cols[9]}</th>
+                        <th key={i} className={(i === bet ? "active" : "col")}>{cols[9]}</th>
                     ))}
                 </tr>
             </tbody>

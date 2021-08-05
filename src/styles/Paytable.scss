@@ -4,6 +4,7 @@
     font-family: $font-tech;
     font-size: 0.8rem;
     text-align: center;
+    color: $font-color;
 }
 
 .col {
@@ -13,4 +14,9 @@
 
 .head {
     margin-left: 10px;
+}
+
+.active {
+    background: greenyellow;
+    color: black;
 }
