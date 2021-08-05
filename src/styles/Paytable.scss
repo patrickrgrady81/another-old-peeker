@@ -5,6 +5,11 @@
     font-size: 0.8rem;
     text-align: center;
     color: $font-color;
+    padding: 1.5rem 0;
+}
+
+table {
+    font-weight: 100;
 }
 
 .col {
@@ -19,4 +24,8 @@
 .active {
     background: greenyellow;
     color: black;
+}
+
+.paytable {
+    margin: 1rem 0;
 }

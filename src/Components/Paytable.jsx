@@ -10,9 +10,9 @@ function Paytable() {
     const bet = useSelector(state => state.bet);
 
     return (
-        <>
-        <h3>PAYTABLE</h3>
-        <table className="pay">
+        <div className="pay">
+        <h3 className="paytable">Pay Table</h3>
+        <table>
             <thead>
                 <tr className="head">
                     {payTable.map((cols, i) => (
@@ -68,7 +68,7 @@ function Paytable() {
                 </tr>
             </tbody>
         </table>
-        </>
+        </div>
     )
 }
 

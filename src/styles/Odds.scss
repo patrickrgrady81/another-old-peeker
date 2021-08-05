@@ -1,0 +1,12 @@
+@import './vars';
+.odds {
+    font-family: $font-tech;
+    font-weight: bold;
+    background-color: $background-green;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    color: $font-color;
+    padding: 2rem 0;
+}
