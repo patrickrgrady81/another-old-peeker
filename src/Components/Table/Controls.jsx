@@ -27,10 +27,6 @@ function Controls() {
                             dispatch(removeCredits(bet));
                             dispatch(changeGameState());
                             break;
-                        case 'DRAW':
-                            console.log('draw new cards');
-                            dispatch(changeGameState());
-                            break;
                         case 'DEAL':
                             console.log('get new hand');
                             dispatch(removeCredits(bet));
@@ -48,6 +44,9 @@ function Controls() {
                 default:
                     break;
             }
+        } else {
+            console.log('draw new cards');
+            dispatch(changeGameState());
         }
     }
 

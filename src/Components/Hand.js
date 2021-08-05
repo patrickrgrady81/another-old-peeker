@@ -1,3 +1,4 @@
+
 class Hand {
     constructor(cards = []) {
         this.cards = cards;
@@ -58,10 +59,9 @@ class Hand {
         }
 
         const getSorted = () => {
-            let sortedHand = this.cards.sort((a, b) => {
+            this.sortedCards = [...this.cards].sort((a, b) => {
                 return (a.numberVal > b.numberVal) ? 1 : -1;
             });
-            this.sortedCards = sortedHand;
         }
 
         const isStraight = () => {
