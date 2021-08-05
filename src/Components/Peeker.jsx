@@ -8,6 +8,7 @@ import Deck from './Deck';
 import Card from './Card';
 import Hand from './Hand';
 import Outcome from './Outcome';
+import Paytable from './Paytable';
 
 import { saveDeck } from '../actions/deck';
 import { saveHand } from '../actions/hand';
@@ -46,7 +47,7 @@ function Peeker() {
     <div className="wrapper">
         <div className="odds"></div>
         <Table />
-        <div className="pay"></div>
+        <Paytable />
         <Credits />
         <Outcome />
         <div className="hints"></div>
