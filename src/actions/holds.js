@@ -4,3 +4,9 @@ export const changeHolds = (id) => {
         id
     }
 }
+
+export const reset = () => {
+    return {
+        type: 'RESET'
+    }
+}

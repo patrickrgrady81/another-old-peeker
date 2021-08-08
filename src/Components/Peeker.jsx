@@ -34,9 +34,8 @@ function Peeker() {
     }
 
     useEffect(() => {
-        let hand;
         let deck = new Deck();
-        hand = new Hand()
+        let hand = new Hand()
         deck.create();
         deck.shuffle();
         toInject ? hand = injectHand() : hand.cards = deck.deal(5);

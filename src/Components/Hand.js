@@ -141,10 +141,6 @@ class Hand {
         return `High Card ${this.sortedCards[4].fullValue}`;
         }
 
-
-
-
-
         getSorted();
         countPairs();
         outcome = getHandValue() || "Nothing";

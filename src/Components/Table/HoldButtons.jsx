@@ -6,21 +6,24 @@ import { changeHolds } from '../../actions/holds';
 import '../../styles/HoldButtons.scss';
 
 function HoldButttons() {
-    const gameState = useSelector(state => state.gameState)
+    const gameState = useSelector(state => state.gameState);
+    // const holds = useSelector(state => state.holds);
     const dispatch = useDispatch();
 
+    
+
     const handleClick = (e) => {
-        if (gameState !== 'START') {
+        if (gameState === 'DRAW') {
             let id = Number(e.target.id);
+            dispatch(changeHolds(id));
 
             if (e.target.classList.contains('light-red')) {
                 e.target.classList.remove('light-red');
                 e.target.classList.add('dark-red');
-                dispatch(changeHolds(id));
+                
             } else {
                 e.target.classList.remove('dark-red');
                 e.target.classList.add('light-red');
-                dispatch(changeHolds(id));
             }
         }
     }

@@ -1,9 +1,15 @@
-import React from 'react'
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { betOne, betMax } from '../../actions/bet';
 import { removeCredits } from '../../actions/credits';
 import { changeGameState } from '../../actions/gameState';
+import { saveDeck } from '../../actions/deck';
+import { saveHand } from '../../actions/hand';
+import { reset } from '../../actions/holds';
+
+import Hand from '../Hand';
+import Deck from '../Deck';
 
 import '../../styles/Controls.scss';
 
@@ -12,6 +18,9 @@ function Controls() {
     const dispatch = useDispatch();
     const bet = useSelector(state => state.bet);
     const gameState = useSelector(state => state.gameState);
+    const hand = useSelector(state => state.hand);
+    const holds = useSelector(state => state.holds);
+    const deck = useSelector(state => state.deck);
 
     const handleButton = (e) => {
         if (gameState !== 'DRAW') {
@@ -28,7 +37,15 @@ function Controls() {
                             dispatch(changeGameState());
                             break;
                         case 'DEAL':
-                            console.log('get new hand');
+
+                            let newDeck = new Deck();
+                            let newHand = new Hand()
+                            newDeck.create();
+                            newDeck.shuffle();
+                            newHand.cards = newDeck.deal(5);
+                            dispatch(saveDeck(newDeck));
+                            dispatch(saveHand(newHand));
+                            dispatch(reset())
                             dispatch(removeCredits(bet));
                             dispatch(changeGameState());
                             break;
@@ -44,8 +61,14 @@ function Controls() {
                 default:
                     break;
             }
-        } else {
-            console.log('draw new cards');
+        } else {  // if it is draw
+            let newHand = [];
+            holds.forEach((hold, i) => {
+                // console.log(hand);
+                hold ? newHand.push(hand.cards[i]) : newHand.push(deck.dealOne());
+            });
+            dispatch(saveDeck(deck));
+            dispatch(saveHand(new Hand(newHand)));
             dispatch(changeGameState());
         }
     }

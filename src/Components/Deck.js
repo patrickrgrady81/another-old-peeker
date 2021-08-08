@@ -26,7 +26,7 @@ class Deck {
         });
     }
 
-    shuffle() {   // use Fisher-Yates Shuffle algorithm
+    shuffle() {
         let m = this.cards.length;
         let t, i;
         while (m) {
