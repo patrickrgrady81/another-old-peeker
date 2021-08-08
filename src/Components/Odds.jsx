@@ -26,7 +26,9 @@ function Odds() {
             <div className="odds">
               <h3 className="oddsHead">Odds</h3>
               {hands.map((hand, i) => (
-                <p key={i} className="odd">{`${hand} = ${odds[i]}%`}</p>
+                <table>
+                  <tr key={i} className="odd">{`${hand} = ${odds[i]}%`}</tr>
+                </table>
               ))}
             </div>
           )
