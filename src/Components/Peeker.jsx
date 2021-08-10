@@ -20,6 +20,8 @@ function Peeker() {
 
     const dispatch = useDispatch();
     let toInject = false;
+    let odds = false;
+    // let hint = false; 
 
     const injectHand = () => {
         let hand = [];
@@ -45,7 +47,7 @@ function Peeker() {
 
     return (
     <div className="wrapper">
-        <Odds />
+        { odds ? <Odds /> : <div className="odds"></div> }
         <Table />
         <Paytable />
         <Credits />
