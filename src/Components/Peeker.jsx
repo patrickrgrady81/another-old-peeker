@@ -20,7 +20,7 @@ function Peeker() {
 
     const dispatch = useDispatch();
     let toInject = false;
-    let odds = false;
+    let odds = true;
     // let hint = false; 
 
     const injectHand = () => {

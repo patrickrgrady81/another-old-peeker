@@ -4,3 +4,10 @@ export const removeCredits = (bet) => {
         payload: bet
     }
 }
+
+export const addCredits = (bet) => {
+    return {
+        type: 'ADDCREDITS',
+        payload: bet
+    }
+}

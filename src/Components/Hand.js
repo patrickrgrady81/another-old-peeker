@@ -144,7 +144,7 @@ class Hand {
         getSorted();
         countPairs();
         outcome = getHandValue() || "Nothing";
-        return outcome;
+        return [this.value, outcome];
     }
 
     inject(hand){
